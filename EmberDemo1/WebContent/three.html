@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="B.L.V.Prasad">
+  	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+     
+    <title>Ember.js Demo 3</title>
+	
+    <script src="js/scripts/jquery-1.10.2.min.js" ></script>
+    <script src="js/scripts/handlebars-1.0.0.js" ></script>
+    <script src="js/scripts/ember-1.0.0.js" ></script>
+   
+    <script src="app.js" ></script>
+    <script src="bookmarks_controller.js" ></script><!--
+    <script src="alert.js" ></script>
+    <script src="demoTemplateController.js" ></script>
+    
+   -->
+    
+   
+</head>
+<body>
+
+	<script type="text/x-handlebars" data-template-name="index">
+     <h1>   Welcome to ember.js  </h1>
+    </script>
+    <script type="text/x-handlebars" data-template-name="about">
+     <h1>  About Page.....</h1>
+			{{outlet}}
+    </script>
+    <script type="text/x-handlebars" data-template-name="contact">
+     <h1>   Please Contact US.... </h1>
+    </script>
+    <script type="text/x-handlebars" data-template-name="about/team">
+     <h1>   Here's out team .... </h1>
+    </script><!--
+    
+     <script type="text/x-handlebars" data-template-name="_alert">
+   	    {{view.message}}
+    </script>
+    
+    -->
+    <!--<script type="text/x-handlebars" data-template-name="bookmarks">
+     <h1>   Listing Bookmarks .... </h1>
+
+	<table>
+    {{#each controller}}
+		<tr>
+			<td>{{name}}</td>
+			<td>{{url}}</td>
+		</tr>
+    {{/each}}
+   </table>
+    </script>
+    
+    <script type="text/x-handlebars" data-template-name="demotemplate">
+             <h2>   Template Demonstration  .... </h2>
+			
+     </script>
+    -->
+	<script type="text/x-handlebars" data-template-name="application">
+	
+	
+	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"></a>
+        </div>
+        <ul class="nav navbar-nav">
+        	<li>{{#linkTo "index"}}Home{{/linkTo}}</li> 
+			<li>{{#linkTo "about"}}About{{/linkTo}}
+				<ul>
+					<li>{{#linkTo "about.team"}}Team{{/linkTo}}</li> 
+				</ul>
+			</li>
+			<li>{{#linkTo "contact"}}Contact{{/linkTo}}</li> 
+          </ul>
+    </nav>
+   
+   
+	<br><br><br>
+
+	<div  class="container-fluid">
+  		{{outlet}}
+  	</div>
+   </script>
+</body>
+</html>

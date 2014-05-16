@@ -1,0 +1,159 @@
+
+						<!-- Routers Demo  -->
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="B.L.V.Prasad">
+    <title>Ember.js Chapter 1 - Notes</title>
+
+    <script src="js/scripts/jquery-1.10.2.min.js" ></script>
+    <script src="js/scripts/handlebars-1.0.0.js" ></script>
+    <script src="js/scripts/ember-1.0.0.js" ></script>
+    
+    <script>
+ 	   window.App = Ember.Application.create();
+
+ 	   App.Router.map(function(){
+			this.route("about");
+			this.route("contact");
+ 	   })
+ 	 
+    </script>
+</head>
+<body>
+	<script type="text/x-handlebars" data-template-name="index">
+     <h1>   Welcome to ember.js  </h1>
+    </script>
+    <script type="text/x-handlebars" data-template-name="about">
+     <h1>  About Page.....</h1>
+    </script>
+    <script type="text/x-handlebars" data-template-name="contact">
+     <h1>   Please Contact US.... </h1>
+    </script>
+</body>
+</html>
+
+-->
+
+
+
+<!--
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="B.L.V.Prasad">
+    <title>Ember.js Chapter 1 - Notes</title>
+
+    <script src="js/scripts/jquery-1.10.2.min.js" ></script>
+    <script src="js/scripts/handlebars-1.0.0.js" ></script>
+    <script src="js/scripts/ember-1.0.0.js" ></script>
+    
+    <script>
+ 	   window.App = Ember.Application.create();
+
+ 	   App.Router.map(function(){
+			this.resource("about",function(){
+				this.route("team");
+				
+			});
+			this.route("contact");
+ 	   })
+ 	 
+    </script>
+</head>
+<body>
+	<script type="text/x-handlebars" data-template-name="index">
+     <h1>   Welcome to ember.js  </h1>
+    </script>
+    <script type="text/x-handlebars" data-template-name="about">
+     <h1>  About Page.....</h1>
+			{{outlet}}
+    </script>
+    <script type="text/x-handlebars" data-template-name="contact">
+     <h1>   Please Contact US.... </h1>
+    </script>
+    <script type="text/x-handlebars" data-template-name="about/team">
+     <h1>   Here's out team .... </h1>
+    </script>
+</body>
+</html>
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="B.L.V.Prasad">
+    <title>Ember.js Demo2 </title>
+
+    <script src="js/scripts/jquery-1.10.2.min.js" ></script>
+    <script src="js/scripts/handlebars-1.0.0.js" ></script>
+    <script src="js/scripts/ember-1.0.0.js" ></script>
+    
+    <script>
+ 	   window.App = Ember.Application.create();
+
+ 	   App.Router.map(function(){
+			this.resource("about",function(){
+				this.route("team");
+			});
+			this.route("contact");
+ 	   })
+ 	 
+    </script>
+</head>
+<body>
+
+	<script type="text/x-handlebars" data-template-name="index">
+     <h1>   Welcome to ember.js  </h1>
+    </script>
+    <script type="text/x-handlebars" data-template-name="about">
+     <h1>  About Page.....</h1>
+			{{outlet}}
+    </script>
+    <script type="text/x-handlebars" data-template-name="contact">
+     <h1>   Please Contact US.... </h1>
+    </script>
+    <script type="text/x-handlebars" data-template-name="about/team">
+     <h1>   Here's out team .... </h1>
+    </script>
+
+
+	<script type="text/x-handlebars" data-template-name="application">
+		<nav>
+		<ul>
+			<li>{{#linkTo "index"}}Home{{/linkTo}}</li> 
+			<li>{{#linkTo "about"}}About{{/linkTo}}
+				<ul>
+					<li>{{#linkTo "about.team"}}Team{{/linkTo}}</li> 
+				</ul>
+			</li>
+			<li>{{#linkTo "contact"}}Contact{{/linkTo}}</li> 
+		</ul>
+		</nav>
+	{{outlet}}
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

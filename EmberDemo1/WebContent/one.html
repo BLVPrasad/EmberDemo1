@@ -1,0 +1,49 @@
+<!-- Classes & Objects  -->
+<!-- Computed Properties  -->
+<!-- Observers  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="B.L.V.Prasad">
+    <title>Ember.js Chapter 1 - Notes</title>
+
+    <script src="js/scripts/jquery-1.10.2.min.js" ></script>
+    <script src="js/scripts/handlebars-1.0.0.js" ></script>
+    <script src="js/scripts/ember-1.0.0.js" ></script>
+    
+    <script><!--
+ 	   window.App = Ember.Application.create();
+ 	   
+	   var globalCounter = 0;
+ 	   var Bookmark = Ember.Object.extend({
+ 		  link : function(){
+	 	 		return this.to_link(); 	
+			}.property("name","url"),
+ 	 	   to_link : function(){
+				return "<a href= '" + this.get("url") +"'>" +this.get("name") + "</a>"; 	 		   
+ 	 	 	}
+ 	 	 	
+		/*	updateCounter : Ember.observer(function(){
+				globalCounter +=1;
+				console.log("Global counter has increased to "+globalCounter);
+			},"name")	*/
+ 	  });
+
+ 	  Bookmark.reopen({formatted : function(){
+  		  return this.get("name") +" "+ this.get("url") ; 	 
+  	   }}); 
+		
+ 	   var bookmark = Bookmark.create({name : 'prasad', url : 'http://hexaware.com', desc : "demo"})
+ 	 
+    --></script>
+</head>
+<body>
+	<script type="text/x-handlebars" data-template-name="index">
+     <h1>   Welcome to ember.js  </h1>
+    </script>
+</body>
+</html>
